@@ -1,0 +1,41 @@
+{
+    "name": "nextin/base",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/nextin/base",
+    "keywords": ["Laravel", "Base"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "NextIn\\Base\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NextIn\\Base\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NextIn\\Base\\BaseServiceProvider"
+            ],
+            "aliases": {
+                "Base": "NextIn\\Base\\Facades\\Base"
+            }
+        }
+    }
+}
